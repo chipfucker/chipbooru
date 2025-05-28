@@ -1,7 +1,8 @@
+<!doctype html>
 <html lang="en">
 	<head>
 		<!-- Global styles -->
-	    <link rel="stylesheet" href="../style.css"/>
+	    <link rel="stylesheet" href="../global/style.css"/>
 		<!-- Per-page styles -->
 		<link rel="stylesheet" href="./style.css"/>
 		<title>Chipbooru</title>
@@ -35,6 +36,13 @@
 				</div>
 			</a>
 		</div>
+
+        <div class="warning-message">
+            <p>Most of these sites are for 18+, and sequently, so are these.
+                By using these front-end alternatives, you agree you are of age.</p>
+        </div>
+
+        <div class="button generic-button">helo</div>
 
 		<?php include_once "../global/navbar.php"; ?>
 	</body>

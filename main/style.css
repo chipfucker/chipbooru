@@ -1,0 +1,20 @@
+:root {
+    --accent-0: #150003;
+    --accent-1: #2f0207;
+    --accent-2: #610812;
+    --accent-3: #8f0c1c;
+    --accent-4: #ba1528;
+    --accent-5: #e9263d;
+    --accent-6: #f0495d;
+    --accent-7: #f27684;
+    --accent-8: #f6a0aa;
+}
+
+body {
+    background-image: linear-gradient(to bottom,
+        var(--accent-0),
+        var(--accent-1)
+    );
+    background-attachment: fixed;
+    background-size: cover;
+}
