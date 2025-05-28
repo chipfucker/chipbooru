@@ -1,0 +1,41 @@
+<html lang="en">
+	<head>
+		<!-- Global styles -->
+	    <link rel="stylesheet" href="../style.css"/>
+		<!-- Per-page styles -->
+		<link rel="stylesheet" href="./style.css"/>
+		<title>Chipbooru</title>
+	</head>
+	<body>
+		<?php include_once "../global/toolbar.php"; ?>
+
+		<div class="chipbooru-logo">
+			<img src="../global/logo/chipbooru.png"/>
+		</div>
+
+		<div class="landing-buttons">
+			<a href="../rule34/index.php">
+				<div>
+					<img src="../global/logo/rule34.xxx.png"/>
+				</div>
+			</a>
+		</div>
+
+		<h3>Also try these sites!</h3>
+
+		<div class="landing-buttons">
+			<a href="https://kurosearch.com">
+				<div>
+					<img src="../global/logo/kurosearch.com.png"/>
+				</div>
+			</a>
+			<a href="https://r34.app">
+				<div>
+					<img src="../global/logo/r34.app.png"/>
+				</div>
+			</a>
+		</div>
+
+		<?php include_once "../global/navbar.php"; ?>
+	</body>
+</html>
