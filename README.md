@@ -1,2 +1,2 @@
-# chipbooru
-A revision of the Rule34 website using its API 
+# Thank you for using Chipbooru!
+I have nothing to put here yet.
