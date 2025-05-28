@@ -8,8 +8,6 @@
 		<title>Chipbooru</title>
 	</head>
 	<body>
-		<?php include_once "../global/toolbar.php"; ?>
-
 		<div class="chipbooru-logo">
 			<img src="../global/logo/chipbooru.png"/>
 		</div>
@@ -44,6 +42,9 @@
 
         <div class="button generic-button">helo</div>
 
-		<?php include_once "../global/navbar.php"; ?>
+		<?php
+            include_once "../global/toolbar.php";
+            include_once "../global/navbar.php";
+        ?>
 	</body>
 </html>
