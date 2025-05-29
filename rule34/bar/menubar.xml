@@ -1,0 +1,7 @@
+<div id="search-bar">
+    <input type="text"></input>
+    <ul id="autocomplete"></ul>
+</div>
+<a href="">
+    <img src="/global/icon/airplane.svg"/>
+</a>

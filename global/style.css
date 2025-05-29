@@ -1,12 +1,93 @@
-:root {
-    font-family: monospace;
+body {
+    background-image: linear-gradient(to bottom,
+        var(--accent-0),
+        var(--accent-1)
+    );
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "gg sans", system-ui;
     color: white;
+    padding: 50px;
+
+    &:has(#toolbar) {
+        padding-top: 75px;
+    }
+    &:has(#navbar) {
+        padding-bottom: 75px;
+    }
+    &:has(#sidebar) {
+        padding-left: 250px;
+    }
+
+    & a {
+        color: white;
+        text-decoration: none;
+    }
+    & h1,
+    & h2,
+    & h3 {
+        font-weight: normal;
+    }
+}
+
+#menubar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(to bottom,
+        var(--accent-1),
+        var(--accent-2)
+    );
+    padding: 0 50px;
+    display: flex;
+    align-content: center;
+    & > #search-bar {
+        height: 50%;
+        align-self: center;
+        & > input {
+            box-sizing: border-box;
+            height: 100%;
+            align-content: center;
+        }
+        & > div {
+            position: absolute;
+            top: 100%;
+        }
+    }
+}
+#navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--accent-2);
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: var(--accent-2);
+    body:has(> #menubar) > & {
+        top: 50px;
+        height: calc(100% - 50px);
+    }
+    body:has(> #navbar) > & {
+        height: calc(100% - 50px);
+    }
+    body:has(> #menubar):has(> #navbar) & {
+        height: calc(100% - 100px);
+    }
 }
 
 div.warning-message {
     width: fit-content;
-    margin: 10px;
-    padding: 10px 30px;
+    margin-bottom: 10px;
+    padding: 0 20px;
     border: solid 2px #e9263d;
     background-image: linear-gradient(to bottom,
         #610812,
@@ -14,29 +95,117 @@ div.warning-message {
     );
 }
 
-div.button {
+div.button,
+button.button {
     padding: 10px;
+    cursor: pointer;
     border: solid 2px var(--accent-4);
     background-image: linear-gradient(to bottom,
-        var(--accent-4),
-        var(--accent-5)
+        var(--accent-5),
+        var(--accent-4)
     );
     &:hover, a:hover & {
         border: solid 2px var(--accent-5);
         background-image: linear-gradient(to bottom,
-            var(--accent-5),
-            var(--accent-6)
+            var(--accent-6),
+            var(--accent-5)
         );
     }
     &:active, a:active & {
-        border: solid 2px var(--accent-4);
+        border: solid 2px var(--accent-3);
         background-image: linear-gradient(to bottom,
-            var(--accent-4),
-            var(--accent-3)
+            var(--accent-3),
+            var(--accent-4)
         );
     }
+
+    &.generic-button {
+        width: fit-content;
+        margin-bottom: 10px;
+    }
 }
-div.button.generic-button {
-    width: fit-content;
-    margin: 10px;
+
+body.index {
+    --accent-0: hsl(353, 100%, 4%);
+    --accent-1: hsl(353, 92%, 10%);
+    --accent-2: hsl(353, 85%, 21%);
+    --accent-3: hsl(353, 85%, 30%);
+    --accent-4: hsl(353, 80%, 41%);
+    --accent-5: hsl(353, 82%, 53%);
+    --accent-6: hsl(353, 85%, 61%);
+    --accent-7: hsl(353, 83%, 71%);
+    --accent-8: hsl(353, 83%, 80%);
+
+    background-image: linear-gradient(to bottom,
+        var(--accent-0),
+        var(--accent-1)
+    );
+
+    & div.chipbooru-logo {
+        font-size: xx-large;
+    }
+
+    & div.landing-buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 10px;
+        & > a > div {
+            display: flex;
+            width: 150px;
+            height: 100px;
+            justify-content: center;
+            align-content: center;
+            border: solid 2px #FFF1;
+            background-size: cover;
+            background-origin: border-box;
+            cursor: pointer;
+            background-image: linear-gradient(to bottom,
+                var(--accent-2),
+                var(--accent-3)
+            );
+            &:hover {
+                border: solid 3px #FFF2;
+                margin: -1px;
+            }
+            &:active {
+                border-color: #FFF8;
+            }
+            & > img {
+                margin: auto;
+                max-width: 90%;
+                max-height: 90%;
+            }
+        }
+
+        &.drive > a > div > div {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            & > img {
+                margin-right: 5px;
+                width: 24px;
+                height: 24px;
+                & + span {
+                    height: fit-content;
+                }
+            }
+        }
+
+        & > a[title="rule34.xxx"] > div {
+            background-image: linear-gradient(to bottom,
+                hsl(115, 32%, 8%),
+                hsl(115, 29%, 11%)
+            );
+        }
+        & > a[title="kurosearch.com"] > div {
+            background-image: linear-gradient(to bottom,
+                hsl(348, 66%, 8%),
+                hsl(348, 71%, 11%)
+            );
+        }
+        & > a[title="r34.app"] > div {
+        }
+    }
 }

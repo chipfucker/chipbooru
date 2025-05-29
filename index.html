@@ -1,23 +1,69 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Chipbooru - Redirecting...</title>
-        <style>
-            body {
-                background-image: linear-gradient(to bottom, black, rgb(100, 0, 0));
-                background-size: cover;
-                background-attachment: fixed;
-                color: white;
-                font-family: monospace;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Redirecting...</h1>
-        <script>
-            window.onload = function() {
-                window.location.href = "./main/index.html";
-            }
-        </script>
-    </body>
+	<head>
+        <meta charset="UTF-8"/>
+		<title>Chipbooru</title>
+	    <link rel="stylesheet" href="./global/style.css">
+        <link rel="stylesheet" href="./font/stylesheet.css">
+		<script type="text/javascript" src="global/main.js"></script>
+	</head>
+	<body class="index">
+		<div class="chipbooru-logo">
+			<img src="global/logo/chipbooru.png" alt="Chipbooru"/>
+		</div>
+
+		<h2>Drive</h2>
+		<div class="landing-buttons drive">
+			<a href="" title="Stash">
+				<div><div>
+					<img src="global/icon/folder.svg" alt="Stash"/>
+					<span>Stash</span>
+				</div></div>
+			</a>
+			<a href="" title="Bookmarks">
+				<div><div>
+					<img src="global/icon/bookmark.svg" alt="Bookmarks"/>
+					<span>Bookmarks</span>
+				</div></div>
+			</a>
+		</div>
+
+		<h2>Boorus</h2>
+		<div class="landing-buttons">
+			<a href="rule34/index.html" title="rule34.xxx">
+				<div>
+					<img src="global/logo/rule34.xxx.png" alt="rule34.xxx"/>
+				</div>
+			</a>
+		</div>
+
+		<h2>Also try these sites!</h2>
+
+		<div class="landing-buttons">
+			<a href="https://kurosearch.com" title="kurosearch.com">
+				<div>
+					<img src="global/logo/kurosearch.com.png" alt="kurosearch.com"/>
+				</div>
+			</a>
+			<a href="https://r34.app" title="r34.app">
+				<div>
+					<img src="global/logo/r34.app.png" alt="r34.app"/>
+				</div>
+			</a>
+		</div>
+
+        <div class="warning-message">
+            <p>Most of these sites are for 18+, and sequently, so are these.
+                By using these front-end alternatives, you agree you are of age.</p>
+        </div>
+        <div class="warning-message">
+            <p>This site is almost never not a work-in-progress! Things may appear broken at any point.</p>
+        </div>
+
+        <div class="button generic-button">Button</div>
+
+		<div id="menubar"></div>
+		<div id="navbar"></div>
+		<div id="sidebar"></div>
+	</body>
 </html>
