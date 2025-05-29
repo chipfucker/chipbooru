@@ -1,0 +1,184 @@
+{
+	"item": [
+	],
+	"folder": [
+		{
+			"name": "Artists",
+			"desc": "",
+			"icon": "",
+			"item": {
+				"folder": [
+					{
+						"name": "Favorites",
+						"desc": "Top favorite artists",
+						"icon": "",
+						"item": {
+							"folder": [
+							],
+							"item": [
+								"angstrom",
+								"bikupan",
+								"slinkmayker",
+							]
+						}
+					},
+					{
+						"name": "Likes",
+						"desc": "Mid-tier artists",
+						"icon": "",
+						"item": {
+							"folder": [
+							],
+							"item": [
+								"motylek"
+							]
+						}
+					}
+				],
+				"item": [
+				]
+			}
+		},
+		{
+			"name": "Characters",
+			"desc": "",
+			"icon": "",
+			"item": {
+				"folder": [
+					{
+						"name": "Favorites",
+						"desc": "Top favorite characters",
+						"icon": "",
+						"item": {
+							"folder": [
+							],
+							"item": [
+								"zoologist_(terraria)"
+							]
+						}
+					},
+					{
+						"name": "Likes",
+						"desc": "Mid-tier characters",
+						"icon": "",
+						"item": {
+							"folder": [
+							],
+							"item": [
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "Search later",
+			"desc": "Look at these later!",
+			"icon": "",
+			"item": {
+				"folder": [
+					{
+						"name": "Searches",
+						"desc": "",
+						"icon": "",
+						"item":
+					},
+					{
+						"name": "Artists",
+						"desc": "",
+						"icon": "",
+						"item": {
+							"folder": [
+							],
+							"item": [
+								"uwotinfokm8",
+								"felinecanis",
+								"dapper_little_arts",
+								"youwannaslap",
+								"arizonathevixen",
+								"paperrose",
+								"thelazydreamer",
+								"the_yeager",
+								"saltyxodium",
+								"dengon",
+								"iarensfwo",
+								"shinki_(artist)",
+								"syvocg",
+								"hataraki_ari",
+								"tail-blazer",
+								"dolcha",
+								"igxxiiil",
+								"darky",
+								"cyrie",
+								"carmessi",
+								"sleepykeeper",
+								"mehdrawings",
+								"fibilis",
+								"doughroom",
+								"pinkkoffin",
+								"srgreja_(artist)",
+								"daredemon7000",
+								"berseepon09",
+								"cereberauwu",
+								"fizzyinkcolansfw",
+								"opqhlak",
+								"kilinah",
+								"limebreaker",
+								"negullust",
+								"kelvin_hiu",
+								"zonkpunch",
+								"axoarts",
+								"magister_(bigbakunyuu)",
+								"borvar",
+								"notkadraw",
+								"toonguy100",
+								"coot27",
+								"shoestrang",
+								"mawmain",
+								"realvinyl",
+								"xenopavilia",
+								"bitwily",
+								"welwraith",
+								"jinsang_3d",
+								"dream-cassette",
+								"taigerarts",
+								"darboo",
+								"prevence -fart",
+								"nanodude78",
+								"jacksito_(artist)",
+								"fairyfud",
+								"streachybear",
+								"fladdykin",
+								"gaikiken",
+								"iyarin",
+								"just_coffee",
+								"breadcatta",
+								"spinneborg",
+								"dmxwoops",
+								"r-mk",
+								"01chairat"
+							]
+						}
+					},
+					{
+						"name": "Characters",
+						"desc": "",
+						"icon": "",
+						"item": {
+							"folder": [
+							],
+							"item": [
+								"june_(jinu)",
+								"ikugo_(character) kiki_(nedoiko)",
+								"nikki_(secretly_saucy)",
+								"taro_(evilpenislair)",
+								"clare_(themushlord)",
+								"minosuke_mino"
+							]
+						}
+					}
+				]
+			}
+		}
+	]
+}
