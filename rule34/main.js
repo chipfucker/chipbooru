@@ -6,16 +6,16 @@ window.onload = async function() {
     if (menubar) {
         const response = await fetch("/rule34/bar/menubar.xml");
         const text = await response.text();
-        menubar.innerHTML += text;
+        menubar.innerHTML = text + menubar.innerHTML;
     }
     if (navbar) {
         const response = await fetch("/rule34/bar/navbar.xml");
         const text = await response.text();
-        navbar.innerHTML += text;
+        navbar.innerHTML = text + navbar.innerHTML;
     }
     if (sidebar) {
         const response = await fetch("/rule34/bar/sidebar.xml");
         const text = await response.text();
-        sidebar.innerHTML += text;
+        sidebar.innerHTML = text + sidebar.innerHTML;
     }
 };

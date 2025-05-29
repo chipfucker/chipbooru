@@ -1,7 +1,30 @@
+<div class="dropdown">
+    <button class="dropdown-button">
+        <img src="/global/icon/city.svg"/>
+        <span>Sites</span>
+    </button>
+    <div class="dropdown-content">
+        <a href="../index.html"><span>Home</span></a>
+        <a href="../e621/index.html"><span>e621</span></a>
+        <a href="../realbooru/index.html"><span>Realbooru</span></a>
+    </div>
+</div>
 <div id="search-bar">
     <input type="text"></input>
     <ul id="autocomplete"></ul>
 </div>
 <a href="">
-    <img src="/global/icon/airplane.svg"/>
+    <div class="button">
+        <img src="/global/icon/airplane.svg"/>
+    </div>
 </a>
+<div class="dropdown">
+    <button class="dropdown-button">
+        <img src="/global/icon/city.svg"/>
+        <span>Image</span>
+    </button>
+    <div class="dropdown-content">
+        <button><span>Copy link to clipboard</span></button>
+        <a><span>Open link in new tab</span></a>
+    </div>
+</div>
