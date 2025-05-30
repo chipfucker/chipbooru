@@ -18,13 +18,3 @@
         <img src="/global/icon/airplane.svg"/>
     </div>
 </a>
-<div class="dropdown">
-    <button class="dropdown-button">
-        <img src="/global/icon/city.svg"/>
-        <span>Image</span>
-    </button>
-    <div class="dropdown-content">
-        <button><span>Copy link to clipboard</span></button>
-        <a><span>Open link in new tab</span></a>
-    </div>
-</div>
