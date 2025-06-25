@@ -10,9 +10,32 @@
 		<script type="text/javascript" src="./main.js"></script>
     </head>
     <body>
-        <img src="../global/logo/rule34.xxx.png"/>
+        <img src="../global/logo/rule34.xxx.png" id="mascot-index"/>
         <div id="post-counter"></div>
         <div id="menubar">
+			<div class="dropdown">
+				<button class="dropdown-button">
+					<img src="/global/icon/city.svg"/>
+					<span>Sites</span>
+				</button>
+				<div class="dropdown-content">
+					<a href="../index.html"><span>Home</span></a>
+					<a href="../e621/index.html"><span>e621</span></a>
+					<a href="../realbooru/index.html"><span>Realbooru</span></a>
+				</div>
+			</div>
+			<div id="search-bar">
+				<input type="text"/>
+				<div id="autocomplete">
+					<ul></ul>
+				</div>
+			</div>
+			<a href="" id="submit">
+				<div class="action">
+					<img src="/global/icon/airplane.svg"/>
+					<span>Submit</span>
+				</div>
+			</a>
             <!-- IMAGE -->			
             <div class="dropdown">
                 <button class="dropdown-button">

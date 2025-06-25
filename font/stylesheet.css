@@ -128,3 +128,11 @@
     font-display: swap;
 }
 
+@font-face {
+	font-family: 'gg mono';
+	src: url('ggmono.woff2');
+	src: local('gg mono'), local('ggmono'),
+		url('ggmono.woff2') format('woff2');
+	font-weight: normal;
+	font-style: none;
+}

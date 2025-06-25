@@ -43,42 +43,61 @@ body {
     padding: 0 50px;
     display: flex;
     align-content: center;
+	& > div, & > button {
+		border-right: solid 1px #FFF2;
+	}
     & > #search-bar {
-        height: 50%;
-        align-self: center;
-        margin: 0 5px;
         & > input {
             box-sizing: border-box;
             height: 100%;
-            align-content: center;
+			width: 250px;
+			border-radius: 0;
+			border: none;
+			outline: 0;
+			background-color: #fbfbb3;
+			font-family: "gg mono", "gg sans";
+			word-wrap: break-word;
+			padding: 15px;
+			font-size: 16px;
         }
-        & > div {
+        & > #autocomplete {
             position: absolute;
             top: 100%;
         }
     }
-    & > a {
-        height: 75%;
-        align-self: center;
-        margin: 0 5px;
-        & > div.button {
-            box-sizing: border-box;
-            display: flex;
-            height: 100%;
-            align-self: center;
-            align-content: center;
-            justify-content: center;
-            padding: 0;
-            aspect-ratio: 1/1;
-            & > img {
-                width: 80%;
-            }
-        }
-    }
+	& > #submit {
+		background-image: linear-gradient(to bottom,
+			var(--accent-2),
+			var(--accent-3)
+		);
+		&:hover {
+			background-image: linear-gradient(to bottom,
+				var(--accent-4),
+				var(--accent-3)
+			);
+		}
+	}
+	& > a > div.action,
+	& > div.action,
+	& > button.action {
+		height: 100%;
+		padding: 0 10px;
+		font-size: 16px;
+		border: none;
+		outline: none;
+		color: white;
+		background-color: transparent;
+		font-family: inherit;
+		align-content: center;
+		& > img {
+			vertical-align: middle;
+			margin-right: 3px;
+			transform: translateY(-2px);
+		}
+	}
     & > div.dropdown {
         height: 100%;
         width: fit-content;
-        margin: 0 5px;
         & > button.dropdown-button {
             height: 100%;
             padding: 0 10px;
@@ -88,6 +107,7 @@ body {
             color: white;
             background-color: transparent;
             font-family: inherit;
+			align-content: center;
             & > img {
                 vertical-align: middle;
                 margin-right: 3px;
@@ -153,6 +173,7 @@ body {
         height: calc(100% - 50px);
     }
     body:has(> #menubar):has(> #navbar) & {
+        top: 50px;
         height: calc(100% - 100px);
     }
 }
@@ -279,6 +300,7 @@ body.index {
             );
         }
         & > a[title="r34.app"] > div {
+			--kill: yourself;
         }
     }
 }
