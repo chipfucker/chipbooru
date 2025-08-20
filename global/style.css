@@ -99,7 +99,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 32px;
     background-image: linear-gradient(to bottom,
         var(--accent-1),
         var(--accent-2)
@@ -107,6 +107,7 @@ body {
     padding: 0 50px;
     display: flex;
     align-content: center;
+    font-size: 16px;
 	& > div, & > button {
 		border-right: solid 1px #FFF2;
 	}
@@ -114,9 +115,11 @@ body {
 		height: 100%;
 		width: 250px;
         & > input {
+			font-size: 16px;
             box-sizing: border-box;
             height: 100%;
-			width: 100%;
+			width: 25%;
+            min-width: 250px;
 			border-radius: 0;
 			border: none;
 			outline: 0;
@@ -126,7 +129,6 @@ body {
 			font-weight: normal;
 			word-wrap: break-word;
 			padding: 15px;
-			font-size: 16px;
         }
         & > .autocomplete {
             position: absolute;
@@ -189,13 +191,13 @@ body {
 	& > button.action {
 		height: 100%;
 		padding: 0 10px;
-		font-size: 16px;
 		border: none;
 		outline: none;
 		color: white;
 		background-color: transparent;
 		font-family: inherit;
 		align-content: center;
+        box-sizing: border-box;
 		& > img {
 			vertical-align: middle;
 			margin-right: 3px;
@@ -236,12 +238,15 @@ body {
                 outline: 0;
                 border: none;
                 color: white;
-                background-image: linear-gradient(
-                    var(--accent-2),
-                    var(--accent-2) 45%,
-                    var(--accent-1) 117%
+                background-image: linear-gradient(to bottom,
+                    var(--accent-1),
+                    var(--accent-2)
                 );
-                padding: 10px;
+                padding: 8px;
+                &:hover {
+                    border: solid 2px white;
+                    padding: 6px;
+                }
             }
         }
         &:hover > div.dropdown-content {
