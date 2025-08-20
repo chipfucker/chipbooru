@@ -30,6 +30,70 @@ body {
     }
 }
 
+#index-search-bar {
+	height: 100%;
+	width: 250px;
+	& > input {
+		box-sizing: border-box;
+		height: 100%;
+		width: 100%;
+		border-radius: 0;
+		border: none;
+		outline: 0;
+		background-color: #fbfbb3;
+		color: black;
+		font-family: "gg mono", "gg sans";
+		font-weight: normal;
+		word-wrap: break-word;
+		padding: 15px;
+		font-size: 16px;
+	}
+	& > .autocomplete {
+		position: relative;
+		transform: translateY(10px);
+		background-color: #fbfbb3;
+		color: black;
+		font-family: "gg mono", "gg sans";
+		font-weight: normal;
+		font-size: 16px;
+		padding: 10px 0;
+		width: fit-content;
+		& > ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			& > li > button {
+				width: 100%;
+				background-color: #fbfbb3;
+				color: black;
+				font-family: "gg mono", "gg sans";
+				font-weight: normal;
+				font-size: 16px;
+				padding: 0 15px;
+				border: none;
+				z-index: 0;
+				cursor: pointer;
+				&:hover {
+					box-shadow: 0 1px 0 #c7c77d;
+					z-index: 2;
+					transform: scale(1.1);
+				}
+				& > span.value {
+					float: left;
+				}
+				& > span.count {
+					color: #000000AA;
+					font-style: italic;
+					float: right;
+					margin-left: 20px;
+					&::before { content: "(" }
+					&::after { content: ")" }
+				}
+			}
+		}
+	}
+}
+
 #menubar {
     position: fixed;
     top: 0;
@@ -47,22 +111,65 @@ body {
 		border-right: solid 1px #FFF2;
 	}
     & > #search-bar {
+		height: 100%;
+		width: 250px;
         & > input {
             box-sizing: border-box;
             height: 100%;
-			width: 250px;
+			width: 100%;
 			border-radius: 0;
 			border: none;
 			outline: 0;
 			background-color: #fbfbb3;
+			color: black;
 			font-family: "gg mono", "gg sans";
+			font-weight: normal;
 			word-wrap: break-word;
 			padding: 15px;
 			font-size: 16px;
         }
-        & > #autocomplete {
+        & > .autocomplete {
             position: absolute;
-            top: 100%;
+            top: calc(100% + 10px);
+			background-color: #fbfbb3;
+			color: black;
+			font-family: "gg mono", "gg sans";
+			font-weight: normal;
+			font-size: 16px;
+			padding: 10px 0;
+			& > ul {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				& > li > button {
+					width: 100%;
+					background-color: #fbfbb3;
+					color: black;
+					font-family: "gg mono", "gg sans";
+					font-weight: normal;
+					font-size: 16px;
+					padding: 0 15px;
+					border: none;
+					z-index: 0;
+					cursor: pointer;
+					&:hover {
+						box-shadow: 0 2px 0 #c7c77d;
+						z-index: 2;
+						transform: scale(1.1);
+					}
+					& > span.value {
+						float: left;
+					}
+					& > span.count {
+						color: #000000AA;
+						font-style: italic;
+						float: right;
+						margin-left: 20px;
+						&::before { content: "(" }
+						&::after { content: ")" }
+					}
+				}
+			}
         }
     }
 	& > #submit {

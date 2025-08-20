@@ -11,8 +11,28 @@
     </head>
     <body class="rule34">
         <img src="../global/logo/rule34.xxx.png" id="mascot-index"/>
+		<div id="index-search-bar">
+			<input type="text"/>
+			<div class="autocomplete">
+				<ul>
+					<li><button>
+						<span class="value">tag 1</span>
+						<span class="count">123</span>
+					</button></li>
+					<li><button>
+						<span class="value">tag two</span>
+						<span class="count">456</span>
+					</button></li>
+					<li><button>
+						<span class="value">tag three</span>
+						<span class="count">789</span>
+					</button></li>
+				</ul>
+			</div>
+		</div>
         <div id="post-counter"></div>
-        <div id="menubar">
+
+		<div id="menubar">
 			<div class="dropdown">
 				<button class="dropdown-button">
 					<img src="/global/icon/city.svg"/>
@@ -26,8 +46,21 @@
 			</div>
 			<div id="search-bar">
 				<input type="text"/>
-				<div id="autocomplete">
-					<ul></ul>
+				<div class="autocomplete">
+					<ul>
+					<li><button>
+						<span class="value">tag 1</span>
+						<span class="count">123</span>
+					</button></li>
+					<li><button>
+						<span class="value">tag two</span>
+						<span class="count">456</span>
+					</button></li>
+					<li><button>
+						<span class="value">tag three</span>
+						<span class="count">789</span>
+					</button></li>
+					</ul>
 				</div>
 			</div>
 			<a href="" id="submit">
@@ -36,7 +69,6 @@
 					<span>Submit</span>
 				</div>
 			</a>
-            <!-- IMAGE -->			
             <div class="dropdown">
                 <button class="dropdown-button">
                 
@@ -52,5 +84,6 @@
                 </div>
             </div>
         </div>
+
     </body>
 </html>
