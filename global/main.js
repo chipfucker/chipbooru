@@ -1,2 +1,0 @@
-window.onload = async function() {
-};
