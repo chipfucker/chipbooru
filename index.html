@@ -1,0 +1,65 @@
+<!-- HTML-validate -->
+<!-- [html-validate-disable attribute-misuse] -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Chipbooru</title>
+		<base href="chipbooru"/>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
+		<!-- Main scripts -->
+		<script src="/global/main.js"></script>
+
+		<!-- IBM Plex Sans (Google Fonts) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"/>
+
+		<!-- Less-To-Css -->
+		<link rel="stylesheet/less" type="text/css" href="style.less"/>
+		<script src="https://cdn.jsdelivr.net/npm/less"></script>
+
+		<!-- Lucide Icons -->
+		<script src="https://unpkg.com/lucide@latest"></script>
+    </head>
+    <body>
+		<div id="title"><span class="title"></span><span class="desc"></span></div>
+
+		<img src="/img/logo/chipbooru.png"/>
+
+		<a href="/user"><h2>Personal</h2></a>
+		<div class="grid">
+			<a href="/user/drive"><div><span>Drive</span></div></a>
+			<a href="/user/bookmarks"><div><span>Bookmarks</span></div></a>
+		</div>
+
+		<a href="/booru"><h2>Boorus</h2></a>
+		<div class="grid">
+			<a href="/booru/rule34" data-title="rule34.xxx"><div>
+				<img src="/img/logo/rule34.xxx.png" alt="rule34.xxx"/>
+			</div></a>
+		</div>
+
+		<h2>Other pages</h2>
+		<div class="grid">
+			<a href="https://github.com/chipfucker/chipbooru"><div>
+				<span>GitHub page for Chipbooru</span>
+			</div></a>
+			<a href="https://discord.gg/Rwgy9htfhd" data-desc="This is where you can find me regarding this site!"><div>
+				<span>Kurosearch server</span>
+			</div></a>
+		</div>
+
+		<h2>Also try these sites!</h2>
+		<div class="grid">
+			<a href="https://kurosearch.com" data-title="Kurosearch"><div>
+				<img src="/img/logo/kurosearch.png" alt="kurosearch.com"/>
+			</div></a>
+			<a href="https://r34.app" data-title="Rule 34 App"><div>
+				<img src="/img/logo/r34-app.svg" alt="r34.app"/>
+			</div></a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>search_query (CB/R34)</title>
+		<base href="chipbooru"/>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
+		<!-- Main scripts -->
+		<script src="/global/main.js"></script>
+		<script src="main.js"></script>
+
+		<!-- IBM Plex Sans (Google Fonts) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"/>
+
+		<!-- Less-To-Css -->
+		<link rel="stylesheet/less" type="text/css" href="style.less"/>
+		<script src="https://cdn.jsdelivr.net/npm/less"></script>
+
+		<!-- Lucide Icons -->
+		<script src="https://unpkg.com/lucide@latest"></script>
+    </head>
+    <body>
+		<div id="title"><span class="title"></span><span class="desc"></span></div>
+
+		<div id="menubar">
+			<div class="dropdown"><span>Page</span><div>
+				<a class="item" href="/"><span>Home</span></a>
+				<div class="dropdown"><span>Extras</span><div>
+					<a class="item" href="extras/cheatsheet"><span>Cheatsheet</span></a>
+				</div></div>
+				<div class="dropdown"><span>User</span><div>
+					<a class="item"><span>Bookmarks</span></a>
+					<a class="item"><span>Drive</span></a>
+					<a class="item"><span>Google account</span></a>
+				</div></div>
+				<div class="dropdown"><span>Boorus</span><div>
+					<a class="item"><span>All boorus</span></a>
+				</div></div>
+			</div></div>
+			<div class="dropdown"><span>Search...</span><div>
+				<div class="item" data-button="search/copy"><span>Copy</span></div>
+				<div class="item" data-button="search/copychip"><span>Copy Chipbooru</span></div>
+				<div class="item" data-button="bookmark"><span>Bookmark</span></div>
+				<div class="dropdown"><span>Rule34</span><div>
+					<div class="item" data-button="search/rule34/copy"><span>Copy link</span></div>
+					<div class="item" data-button="search/rule34/open"><span>Open link</span></div>
+				</div></div>
+			</div></div>
+
+			<a class="item" href="../search"><span>(Go to search page)</span></a>
+			<a class="item" href="../post"><span>(Go to post page)</span></a>
+		</div>
+
+		<div id="search">
+			<div class="clear button"><span>Clear</span></div>
+			<div class="input">
+				<input type="text" size="30"/>
+				<div class="autocomplete" data-status="results">
+					<div class="loading"><span>Loading...</span></div>
+					<div class="none"><span>No tags!</span></div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(123)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(456)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(789)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(012)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(345)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(678)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(901)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(234)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(567)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(890)</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="submit button"><span>Submit</span></div>
+		</div>
+
+		<div id="results">
+			<a href="../post?id=13026299&q=zoologist_(terraria)">
+				<div class="result">
+					<img src="https://wimg.rule34.xxx//images/140/78fca12077f71290cce93f04bb8c1055.jpeg?12442531"/>
+				</div>
+			</a>
+			<a href="../post?id=13026299&q=zoologist_(terraria)">
+				<div class="result" data-type="video">
+					<img src="https://wimg.rule34.xxx//images/140/78fca12077f71290cce93f04bb8c1055.jpeg?12442531"/>
+				</div>
+			</a>
+			<a href="../post?id=13026299&q=zoologist_(terraria)">
+				<div class="result" data-type="gif">
+					<img src="https://wimg.rule34.xxx//images/140/78fca12077f71290cce93f04bb8c1055.jpeg?12442531"/>
+				</div>
+			</a>
+		</div>
+
+		<div id="flipper"><div>
+			<div class="left"><div class="button">
+				<div data-lucide="move-left"></div>
+			</div></div>
+			<div class="right"><div class="button">
+				<div data-lucide="move-right"></div>
+			</div></div>
+			<div class="info"><div>
+				<div class="posts"><span>1-50 / 75</span></div>
+				<div class="pages"><span>1 / 2</span></div>
+			</div></div>
+		</div></div>
+	</body>
+</html>

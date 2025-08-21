@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Rule34 (CB)</title>
+		<base href="chipbooru"/>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
+		<!-- Main scripts -->
+		<script src="/global/main.js"></script>
+
+		<!-- IBM Plex Sans (Google Fonts) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"/>
+
+		<!-- Less-To-Css -->
+		<link rel="stylesheet/less" type="text/css" href="style.less"/>
+		<script src="https://cdn.jsdelivr.net/npm/less"></script>
+
+		<!-- Lucide Icons -->
+		<script src="https://unpkg.com/lucide@latest"></script>
+    </head>
+    <body>
+		<div id="title"><span class="title"></span><span class="desc"></span></div>
+
+		<div id="menubar">
+			<div class="dropdown"><span>Page</span><div>
+				<a class="item" href="/"><span>Home</span></a>
+				<div class="dropdown"><span>Extras</span><div>
+					<a class="item" href="extras/cheatsheet"><span>Cheatsheet</span></a>
+				</div></div>
+				<div class="dropdown"><span>User</span><div>
+					<a class="item"><span>Bookmarks</span></a>
+					<a class="item"><span>Drive</span></a>
+					<a class="item"><span>Google account</span></a>
+				</div></div>
+				<div class="dropdown"><span>Boorus</span><div>
+					<a class="item"><span>All boorus</span></a>
+				</div></div>
+			</div></div>
+
+			<a class="item" href="search"><span>(Go to search page)</span></a>
+			<a class="item" href="post"><span>(Go to post page)</span></a>
+		</div>
+
+		<div id="search">
+			<div class="clear button"><span>Clear</span></div>
+			<div class="input">
+				<input type="text" size="30"/>
+				<div class="autocomplete" data-status="results">
+					<div class="loading"><span>Loading...</span></div>
+					<div class="none"><span>No tags!</span></div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(123)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(456)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(789)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(012)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(345)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(678)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(901)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(234)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(567)</span></div>
+					</div>
+					<div class="result">
+						<div class="tag"><span>tag_name</span></div>
+						<div class="count"><span>(890)</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="submit button"><span>Submit</span></div>
+		</div>
+
+		<div class="logo" style="display: none;">
+			<img src="/img/logo/rule34.xxx.png"/>
+		</div>
+	</body>
+</html>

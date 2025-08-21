@@ -1,0 +1,105 @@
+@accent-main: #e92650;
+@accent-light-4: lighten(spin(@accent-main, 8), 80%, relative);
+@accent-light-3: lighten(spin(@accent-main, 6), 60%, relative);
+@accent-light-2: lighten(spin(@accent-main, 4), 40%, relative);
+@accent-light-1: lighten(spin(@accent-main, 2), 20%, relative);
+@accent-dark-1: darken(spin(@accent-main, -5), 20%, relative);
+@accent-dark-2: darken(spin(@accent-main, -10), 40%, relative);
+@accent-dark-3: darken(spin(@accent-main, -15), 60%, relative);
+@accent-dark-4: darken(spin(@accent-main, -20), 70%, relative);
+@accent-dark-5: darken(spin(@accent-main, -25), 80%, relative);
+@accent-dark-6: darken(spin(@accent-main, -30), 90%, relative);
+
+body {
+	padding: 100px 50px;
+	margin: 0;
+
+	background-image: linear-gradient(to bottom right, @accent-dark-6, 70%, @accent-dark-3);
+	background-size: cover;
+	background-attachment: fixed;
+
+	color: white;
+	font-family: "IBM Plex Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+#title {
+	display: none;
+
+	z-index: 3;
+	padding: 4px 6px;
+	position: fixed;
+	max-width: 200px;
+	line-break: auto;
+
+	background-image: linear-gradient(to bottom right, @accent-dark-6, 70%, @accent-dark-3);
+	background-size: cover;
+	background-attachment: fixed;
+
+	border: solid 1px @accent-main;
+	border-radius: 6px;
+
+	span.title {
+		font-size: 16px;
+		display: block;
+	}
+	span.desc {
+		font-size: 12px;
+		display: block;
+		color: @accent-light-3;
+	}
+}
+
+img[src="/img/logo/chipbooru.png"] {
+	max-height: 64px;
+}
+
+div.grid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	> a > div {
+		width: 150px;
+		height: 100px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		border: solid 2px #FFF1;
+		border-radius: 8px;
+		background-image: linear-gradient(to bottom, @accent-dark-2, @accent-dark-1);
+		background-size: cover;
+		background-origin: border-box;
+
+		> img {
+			max-width: 90%;
+			max-height: 90%;
+		}
+
+		transition: all 100ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+		&:hover {
+			transform: scale(1.1);
+			border-color: #FFF2;
+			box-shadow: 0 5px 15px 0 #0004;
+		}
+	}
+
+	> a[href="/booru/rule34"] > div {
+		background-image: linear-gradient(to bottom,  darken(spin(#aae5a4, 20), 85%, relative), darken(#aae5a4, 75%, relative));
+	}
+
+	> a[href="https://kurosearch.com"] > div {
+		background-image: linear-gradient(to bottom,  #151520, lighten(#151520, 50%, relative));
+	}
+	> a[href="https://r34.app"] > div {
+		background-image: linear-gradient(to bottom,  #17162f, #1b2b3a);
+	}
+}
