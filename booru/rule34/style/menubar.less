@@ -1,0 +1,113 @@
+#menubar {
+	width: 100vw;
+	max-height: fit-content;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	z-index: 2;
+
+	background-image: linear-gradient(to bottom, @accent-dark-5, @accent-dark-4);
+
+	display: flex;
+	flex-direction: row;
+	align-content: flex-start;
+	flex-basis: content;
+
+	user-select: none;
+
+	@vertical-padding: 6px;
+	@horizontal-padding: 2px;
+	@dropdown-padding: 20px;
+
+	a.item, div.item, div.dropdown {
+		display: flex;
+		height: 100%;
+		align-items: center;
+		background-image: linear-gradient(to bottom, @accent-dark-1, @accent-dark-2 10%, @accent-dark-1);
+		background-size: cover;
+		border: 2px solid @accent-dark-2;
+		box-sizing: border-box;
+		color: white;
+		align-content: center;
+		&:hover {
+			background-image: linear-gradient(to bottom, @accent-light-3, @accent-light-4);
+			color: black;
+			border: 2px solid @accent-light-2;
+		}
+	}
+	a.item, div.item {
+		padding: @horizontal-padding @vertical-padding;
+		cursor: pointer;
+	}
+	div.dropdown {
+		padding: @horizontal-padding @dropdown-padding @horizontal-padding @vertical-padding;
+		cursor: default;
+	}
+	> div.dropdown {
+		position: relative;
+
+		> span {
+			&::after {
+				content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' \
+					fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M5.3 9.3a1 1 0 0 1 1.4 0l5.3 5.29 5.3-5.3a1 1 0 11 \
+					1.4 1.42l-6 6a1 1 0 0 1-1.4 0l-6-6a1 1 0 0 1 0-1.42Z'/%3E%3C/svg%3E");
+				position: absolute;
+				transform: translate(2px, 4px);
+			}
+		}
+		> div {
+			display: none;
+			position: absolute;
+			top: calc(100% + 2px);
+			left: -2px;
+
+			flex-direction: column;
+			min-width: max-content;
+
+			div.dropdown {
+				position: relative;
+
+				> span {
+					&::after {
+						content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' \
+							fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M5.3 9.3a1 1 0 0 1 1.4 0l5.3 5.29 5.3-5.3a1 1 0 11 \
+							1.4 1.42l-6 6a1 1 0 0 1-1.4 0l-6-6a1 1 0 0 1 0-1.42Z'/%3E%3C/svg%3E");
+						position: absolute;
+						transform: rotate(270deg);
+						right: 0;
+					}
+				}
+
+				> div {
+					display: none;
+					position: absolute;
+					top: -2px;
+					left: calc(100% + 2px);
+
+					flex-direction: column;
+					min-width: max-content;
+				}
+
+				&:hover {
+					> span::after {
+						filter: brightness(0%);
+					}
+					> div {
+						display: flex;
+					}
+				}
+			}
+		}
+
+		&:hover {
+			> span::after {
+				filter: brightness(4%);
+			}
+			> div {
+				display: flex;
+			}
+		}
+	}
+}

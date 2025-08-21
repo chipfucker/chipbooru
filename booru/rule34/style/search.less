@@ -1,0 +1,127 @@
+#search {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 10px;
+
+	div.clear, div.submit {
+		padding: 2px 6px;
+	}
+
+	div.input {
+		position: relative;
+		color: black;
+		padding: 2px 6px;
+		background-image: linear-gradient(to bottom, @accent-light-3, white);
+		background-size: cover;
+		box-sizing: border-box;
+		border: 2px solid @accent-light-3;
+		border-radius: 8px;
+
+		input {
+			border: none;
+			outline: 0;
+			background-color: transparent;
+
+			font-family: inherit;
+			font-size: inherit;
+			color: inherit;
+		}
+
+		div.autocomplete {
+			width: 100%;
+			padding: 2px 6px;
+			display: none;
+
+			position: absolute;
+			top: calc(100% + 14px);
+			left: 0;
+
+			box-sizing: border-box;
+			background-image: linear-gradient(to bottom, desaturate(darken(spin(#FFC, -5), 10%, relative), 10%, relative), #FFC);
+			border: 2px solid darken(spin(#FFC, -5), 20%, relative);
+			border-radius: 8px;
+
+			&::after {
+				content: "";
+				display: block;
+				width: 0;
+
+				position: absolute;
+				bottom: 100%;
+				left: 6px;
+
+				border-style: solid;
+				border-color: desaturate(darken(spin(#FFC, -5), 10%, relative), 10%, relative) transparent;
+				border-width: 0 10px 10px;
+			}
+			div.result {
+				display: grid;
+				grid-template-areas: "tag count";
+				grid-auto-columns: 2fr 1fr;
+
+				div.name, div.count {
+					display: flex;
+					flex-direction: row;
+				}
+				div.name {
+					grid-area: tag;
+					justify-content: flex-start;
+				}
+				div.count {
+					grid-area: count;
+					justify-content: flex-end;
+				}
+			}
+			div.loading, div.none {
+				display: none;
+			}
+			div.loading span {
+				color: @accent-dark-4;
+			}
+			div.none span {
+				color: #4a072c;
+			}
+		}
+
+		&:has(input:focus) {
+			box-shadow: 0 1px 5px 3px #FFC4;
+			background-image: linear-gradient(to bottom, desaturate(darken(spin(#FFC, -5), 10%, relative), 10%, relative), #FFC);
+			border-color: darken(spin(#FFC, -5), 20%, relative);
+
+			div.autocomplete[data-status="loading"] {
+				display: block;
+
+				background-image: linear-gradient(to bottom, @accent-light-3, @accent-light-4);
+				border-color: @accent-light-3;
+				&::after {
+					border-color: @accent-light-3 transparent;
+				}
+				div.loading {
+					display: block;
+				}
+			}
+			div.autocomplete[data-status="results"] {
+				display: block;
+
+				background-image: linear-gradient(to bottom, desaturate(darken(spin(#FFC, -5), 10%, relative), 10%, relative), #FFC);
+				border-color: darken(spin(#FFC, -5), 20%, relative);
+				&::after {
+					border-color: darken(spin(#FFC, -5), 20%, relative) transparent;
+				}
+			}
+			div.autocomplete[data-status="none"] {
+				display: block;
+				background-image: linear-gradient(to bottom, #f8bac1, white);
+				border-color: #f8bac1;
+				&::after {
+					border-color: #f8bac1 transparent;
+				}
+				div.none {
+					display: block;
+				}
+			}
+		}
+	}
+}
