@@ -93,7 +93,7 @@ body {
 			}
 		}
 		div.controls {
-			display: flex;
+			display: none;
 			flex-direction: row;
 			gap: 4px;
 			line-height: 1em;
@@ -152,6 +152,9 @@ body {
 				align-items: center;
 				justify-content: center;
 			}
+		}
+		&[data-type="video"] div.controls {
+			display: flex;
 		}
 	}
 	> div.info {
