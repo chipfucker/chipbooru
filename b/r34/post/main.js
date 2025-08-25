@@ -9,10 +9,10 @@ window.addEventListener("load", function() {
 	cs.bind(callback);
 });
 
-window.addEventListener("error", function(message, source, line, column, error) {
+window.addEventListener("error", (e) => {
 	this.document.getElementById("console").innerHTML +=
-		`<div class="error">"${message}"\nSOURCE: ${source} (${line}:${column})\n`
-		+ `ERROR:${JSON.stringify(error)}`;
+		`<div class="error">"${e.message}"\nSOURCE: ${e.source} (${e.lineno}:${e.colno})\n`
+		+ `ERROR:${JSON.stringify(e.error)}`;
 });
 
 /*** LUCIDE SVG ICONS ***/
