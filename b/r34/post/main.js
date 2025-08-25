@@ -9,6 +9,12 @@ window.addEventListener("load", function() {
 	cs.bind(callback);
 });
 
+window.addEventListener("error", function(message, source, line, column, error) {
+	this.document.getElementById("console").innerHTML +=
+		`<div class="error">"${message}"\nSOURCE: ${source} (${line}:${column})\n`
+		+ `ERROR:${JSON.stringify(error)}`;
+});
+
 /*** LUCIDE SVG ICONS ***/
 window.addEventListener("load", function() {
 	lucide.createIcons();
