@@ -7,6 +7,10 @@ window.addEventListener("load", function() {
 		document.getElementById("console").innerHTML += message; 
 	};
 	window.ConsoleSubscriber.bind(callback);
+
+	console.log("this is a log bitch");
+	console.warn("bitch this is a warn");
+	console.debug("i be poopin");
 });
 
 window.addEventListener("error", (e) => {
