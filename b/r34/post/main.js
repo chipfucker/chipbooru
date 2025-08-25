@@ -3,7 +3,7 @@ const debug = true;
 window.addEventListener("load", function() {
 	let callback = (category, args) => {
 		let message = `<div class="${category}">${
-			args.JSON.stringify(args, null, "\t") }</div>`;
+			JSON.stringify(args, null, "\t") }</div>`;
 		document.getElementById("console").innerHTML += message; 
 	};
 	cs.bind(callback);
