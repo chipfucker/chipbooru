@@ -6,6 +6,24 @@ window.addEventListener("error", (e) => {
 		+ `ERROR:${JSON.stringify(e.error)}`;
 });
 
+const con = {
+	"log": (m) => {
+		document.getElementById("console").innerHTML += `<div class="log">"${m}"</div>`;
+	},
+	"warn": (m) => {
+		document.getElementById("console").innerHTML += `<div class="warn">"${m}"</div>`;
+	},
+	"error": (m) => {
+		document.getElementById("console").innerHTML += `<div class="error">"${m}"</div>`;
+	},
+	"debug": (m) => {
+		document.getElementById("console").innerHTML += `<div class="debug">"${m}"</div>`;
+	},
+	"info": (m) => {
+		document.getElementById("console").innerHTML += `<div class="info">"${m}"</div>`;
+	}
+};
+
 /*** TITLE ***/
 window.addEventListener("load", function() {
 	const el = document.getElementById("title");
