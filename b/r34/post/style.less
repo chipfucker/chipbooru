@@ -5,6 +5,7 @@
 @import "../style/title.less";
 @import "../style/menubar.less";
 @import "../style/search.less";
+@import "../style/console.less";
 
 body {
 	padding: 75px 50px 100px;
@@ -70,26 +71,25 @@ body {
 		display: grid;
 		grid-auto-flow: row;
 		grid-gap: 4px;
-		> div.content {
-			div.content {
-				background-image: linear-gradient(to bottom, @accent-dark-5, @accent-dark-4);
-				width: 100%;
-				height: fit-content;
-				display: flex;
-				justify-content: center;
-				border-radius: 8px 8px 0 0;
-				img, video {
-					max-height: 60vh;
-					max-width: 100%;
-				}
+		div.content {
+			background-image: linear-gradient(to bottom, @accent-dark-5, @accent-dark-4);
+			width: 100%;
+			height: fit-content;
+			display: flex;
+			justify-content: center;
+			border-radius: 8px;
+			overflow: hidden;
+			img, video {
+				max-height: 60vh;
+				max-width: 100%;
 			}
-			div.progress {
-				height: 3px;
-				background-color: @accent-dark-2;
-				div {
-					height: 100%;
-					background-color: @accent-light-2;
-				}
+		}
+		div.progress {
+			height: 3px;
+			background-color: @accent-dark-2;
+			div {
+				height: 100%;
+				background-color: @accent-light-2;
 			}
 		}
 		div.controls {
@@ -200,7 +200,7 @@ body {
 			}
 			> div.character a div {
 				@hue: 120;
-				@bright: hsl(120, 100%, 45%);
+				@bright: hsl(120, 100%, 55%);
 				@dark: hsl(120, 100%, 35%);
 				
 				border-color: @dark;
