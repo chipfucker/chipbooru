@@ -1,3 +1,12 @@
+const debug = true;
+
+window.addEventListener("error", (e) => {
+	this.document.getElementById("console").innerHTML +=
+		`<div class="error">"${e.message}"\nSOURCE: ${e.source} (${e.lineno}:${e.colno})\n`
+		+ `ERROR:${JSON.stringify(e.error)}`;
+});
+
+/*** TITLE ***/
 window.addEventListener("load", function() {
 	const el = document.getElementById("title");
 	document.addEventListener("mousemove", function(e) {
@@ -15,4 +24,9 @@ window.addEventListener("load", function() {
 			el.querySelector("span.desc").innerHTML = "";
 		}
 	});
+});
+
+/*** LUCIDE SVG ICONS ***/
+window.addEventListener("load", () => {
+	lucide.createIcons();
 });
