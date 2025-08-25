@@ -6,7 +6,7 @@ window.addEventListener("load", function() {
 			JSON.stringify(args, null, "\t") }</div>`;
 		document.getElementById("console").innerHTML += message; 
 	};
-	cs.bind(callback);
+	window.ConsoleSubscriber.bind(callback);
 });
 
 window.addEventListener("error", (e) => {
