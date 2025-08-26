@@ -84,6 +84,7 @@ body {
 			}
 		}
 		div.progress {
+            display: none;
 			height: 3px;
 			border-radius: 1.5px;
 			background-color: @accent-dark-2;
@@ -155,9 +156,10 @@ body {
 				justify-content: center;
 			}
 		}
-		&[data-type="video"] div.controls {
-			display: flex;
-		}
+		&[data-type="video"] {
+            div.controls { display: flex; }
+            div.progress { display: block; }
+        }
 	}
 	> div.info {
 		grid-area: info;
@@ -192,87 +194,157 @@ body {
 		grid-area: tags;
 		> div {
 			width: 100%;
-			padding: 16px;
+			padding: 8px;
 			font-size: 0;
 			
 			display: grid;
 			grid-auto-flow: row;
-			grid-gap: 16px;
 			
-			> div a div {
-				width: fit-content;
-				margin: 2px;
-				padding: 2px 5px;
-				display: inline-flex;
-				
-				border-style: solid;
-				border-width: 2px;
-				border-radius: 4px;
-				
-				cursor: pointer;
-				
-				span {
-					font-size: 16px;
+			> div {
+				max-height: 15vh;
+				overflow-y: auto;
+				scrollbar-width: thin;
+				padding: 4px;
+			 
+                /** BULBOUS **/ // [
+                a div {
+                    width: fit-content;
+                    margin: 2px;
+                    padding: 2px 5px;
+                    display: inline-flex;
+                    
+                    border-style: solid;
+                    border-width: 2px;
+                    border-radius: 4px;
+                    
+                    cursor: pointer;
+                    
+                    span {
+                        font-size: 16px;
+                    }
+                }
+                &.copyright a div {
+                    @hue: 300;
+                    @bright: hsl(300, 75%, 70%);
+                    @dark: hsl(300, 75%, 45%);
+                    
+                    border-color: @dark;
+                    background-image: linear-gradient(to bottom, @bright, @dark 10%, @bright);
+                    color: hsl(@hue, 100%, 10%);
+                    text-shadow: 0 2px 0 #fff4;
+                }
+                &.character a div {
+                    @hue: 120;
+                    @bright: hsl(120, 100%, 55%);
+                    @dark: hsl(120, 100%, 35%);
+                    
+                    border-color: @dark;
+                    background-image: linear-gradient(to bottom, @bright, @dark 10%, @bright);
+                    color: hsl(@hue, 100%, 10%);
+                    text-shadow: 0 2px 0 #fff6;
+                }
+                &.artist a div {
+                    @hue: 0;
+                    @bright: hsl(0, 100%, 73%);
+                    @dark: hsl(0, 100%, 50%);
+                    
+                    border-color: @dark;
+                    background-image: linear-gradient(to bottom, @bright, @dark 10%, @bright);
+                    color: hsl(@hue, 100%, 10%);
+                    text-shadow: 0 2px 0 #fff2;
+                }
+                &.general a div {
+                    @hue: 240;
+                    @bright: hsl(240, 100%, 73%);
+                    @dark: hsl(240, 100%, 63%);
+                    
+                    border-color: @dark;
+                    background-image: linear-gradient(to bottom, @bright, @dark 10%, @bright);
+                    color: hsl(@hue, 100%, 10%);
+                    text-shadow: 0 2px 0 #fff3;
+                }
+                &.meta a div {
+                    @hue: 32;
+                    @bright: hsl(32, 100%, 70%);
+                    @dark: hsl(32, 100%, 50%);
+                    
+                    border-color: @dark;
+                    background-image: linear-gradient(to bottom, @bright, @dark 10%, @bright);
+                    color: hsl(@hue, 100%, 10%);
+                    text-shadow: 0 2px 0 #fff4;
+                }
+                &.null a div {
+                    @bright: hsl(0, 0%, 70%);
+                    @dark: hsl(0, 0%, 60%);
+
+                    border-color: @dark;
+                    background-image: linear-gradient(to bottom, @bright, @dark 10%, @bright);
+                    color: hsl(0, 0%, 10%);
+                    text-shadow: 0 2px 0 #fff2;
+                }
+                // ]
+                
+                /** CLASSIC **/ // [
+                /*
+				a div {
+					span {
+						font-size: 16px;
+						line-break: anywhere;
+					}
+                    
+					width: fit-content;
+					margin: 2px;
+					padding: 2px 5px;
+					display: inline-flex;
+                    
+					border-style: solid;
+					border-width: 2px;
+					border-radius: 4px;
+                    
+					cursor: pointer;
+					transition: box-shadow 50ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+                    
+					color: hsl(var(--hue), 100%, 95%);
+					border-color: hsl(var(--hue), 100%, 80%);
+					background-image:
+						linear-gradient(to bottom, hsl(var(--hue), 100%, 10%), hsl(var(--hue), 100%, 15%));
+					box-shadow: none;
+                    
+					&:hover {
+						color: hsl(var(--hue), 75%, 25%);
+						border-color: hsl(var(--hue), 75%, 25%);
+						background-image:
+							linear-gradient(to bottom, hsl(var(--hue), 100%, 85%), hsl(var(--hue), 100%, 95%));
+						box-shadow: 0 0 5px 3px hsl(var(--hue), 100%, 85%, 0.2);
+					}
+					&:active {
+						color: hsl(var(--hue), 100%, 95%);
+						border-color: hsl(var(--hue), 100%, 15%);
+						background-image:
+							linear-gradient(to bottom, hsl(var(--hue), 100%, 10%), hsl(var(--hue), 100%, 15%));
+						box-shadow: none;
+					}
 				}
-			}
-			> div.copyright a div {
-				@hue: 300;
-				@bright: hsl(300, 75%, 70%);
-				@dark: hsl(300, 75%, 45%);
-				
-				border-color: @dark;
-				background-image: linear-gradient(to bottom, @bright, @dark 10%, @bright);
-				color: hsl(@hue, 100%, 10%);
-				text-shadow: 0 2px 0 #fff4;
-			}
-			> div.character a div {
-				@hue: 120;
-				@bright: hsl(120, 100%, 55%);
-				@dark: hsl(120, 100%, 35%);
-				
-				border-color: @dark;
-				background-image: linear-gradient(to bottom, @bright, @dark 10%, @bright);
-				color: hsl(@hue, 100%, 10%);
-				text-shadow: 0 2px 0 #fff6;
-			}
-			> div.artist a div {
-				@hue: 0;
-				@bright: hsl(0, 100%, 73%);
-				@dark: hsl(0, 100%, 50%);
-				
-				border-color: @dark;
-				background-image: linear-gradient(to bottom, @bright, @dark 10%, @bright);
-				color: hsl(@hue, 100%, 10%);
-				text-shadow: 0 2px 0 #fff2;
-			}
-			> div.general a div {
-				@hue: 240;
-				@bright: hsl(240, 100%, 73%);
-				@dark: hsl(240, 100%, 63%);
-				
-				border-color: @dark;
-				background-image: linear-gradient(to bottom, @bright, @dark 10%, @bright);
-				color: hsl(@hue, 100%, 10%);
-				text-shadow: 0 2px 0 #fff3;
-			}
-			> div.meta a div {
-				@hue: 32;
-				@bright: hsl(32, 100%, 70%);
-				@dark: hsl(32, 100%, 50%);
-				
-				border-color: @dark;
-				background-image: linear-gradient(to bottom, @bright, @dark 10%, @bright);
-				color: hsl(@hue, 100%, 10%);
-				text-shadow: 0 2px 0 #fff4;
-			}
-			> div.null a div {
-				@bright: hsl(0, 0%, 70%);
-				@dark: hsl(0, 0%, 60%);
-				
-				border-color: @dark;
-				background-image: linear-gradient(to bottom, @bright, @dark 10%, @bright);
-				color: hsl(0, 0%, 10%);
-				text-shadow: 0 2px 0 #fff2;
+			
+                &.copyright { --hue: 300; }
+                &.character { --hue: 120; }
+                &.artist { --hue: 0; }
+                &.general { --hue: 240; }
+                &.meta { --hue: 32; }
+                &.null a div {
+                    color: hsl(0, 0%, 95%);
+                    border-color: hsl(0, 0%, 70%);
+                    background-image:
+                        linear-gradient(to bottom, hsl(0, 0%, 10%), hsl(0, 0%, 15%));
+
+                    &:hover {
+                        color: hsl(0, 0%, 25%);
+                        border-color: hsl(0, 0%, 25%);
+                        background-image:
+                            linear-gradient(to bottom, hsl(0, 0%, 85%), hsl(0, 0%, 95%));
+                    }
+                } /**/
+                // ]a
 			}
 		}
 	}
