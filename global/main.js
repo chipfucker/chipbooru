@@ -2,7 +2,7 @@ const debug = true;
 
 window.addEventListener("error", (e) => {
 	this.document.getElementById("console").innerHTML +=
-		`<div class="error">"${e.message}"\nSOURCE: ${e.source} (${e.lineno}:${e.colno})\n`
+		`<div class="error">"${e.message}" (${e.lineno}:${e.colno})\n`
 		+ `ERROR: ${JSON.stringify(e.error, null, 4)}`;
 });
 
