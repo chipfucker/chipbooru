@@ -19,8 +19,6 @@ body {
 	flex-direction: row;
 	justify-content: center;
 
-	z-index: 2;
-
 	> div {
 		display: grid;
 		grid-template-areas: "left info right";
@@ -79,16 +77,20 @@ body {
 			justify-content: center;
 			border-radius: 8px;
 			overflow: hidden;
+			max-height: 60vh;
 			img, video {
-				max-height: 60vh;
+				max-height: 100%;
 				max-width: 100%;
 			}
 		}
 		div.progress {
 			height: 3px;
+			border-radius: 1.5px;
 			background-color: @accent-dark-2;
+			margin: 0 8px;
 			div {
 				height: 100%;
+				border-radius: 1.5px;
 				background-color: @accent-light-2;
 			}
 		}
@@ -160,6 +162,19 @@ body {
 	> div.info {
 		grid-area: info;
 		border-radius: 8px;
+		padding: 16px;
+		display: grid;
+		grid-auto-flow: row;
+		grid-gap: 8px;
+		
+		dl {
+			margin: 0;
+			dt {
+				&::after {
+					content: ": ";
+				}
+			}
+			dd {
 	}
 	> div.tags {
 		grid-area: tags;
@@ -251,5 +266,49 @@ body {
 	}
 	> div.comments {
 		grid-area: comments;
+		padding: 8px;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+        border-radius: 16px;
+		div.comment {
+			border-radius: 8px;
+			background-image: linear-gradient(to bottom, @accent-dark-2, @accent-dark-1);
+			padding: 8px 16px;
+			display: flex;
+			flex-direction: column;
+			div.info {
+				span.user {
+					font-weight: bold;
+					&::after {
+						content: " » ";
+						font-weight: normal;
+						color: @accent-light-3;
+					}
+				}
+				span.id {
+					color: @accent-light-3;
+					&::before {
+						content: "#";
+					}
+				}
+			}
+			blockquote {
+				padding: 8px 24px;
+				margin: 0;
+				position: relative;
+				&::before {
+					content: "";
+					background-color: @accent-light-1;
+					display: block;
+					position: absolute;
+					top: 8px;
+					left: 8px;
+					height: calc(100% - 16px);
+					width: 3px;
+					border-radius: 1.5px;
+				}
+			}
+		}
 	}
 }

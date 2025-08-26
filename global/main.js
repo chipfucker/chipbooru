@@ -7,20 +7,25 @@ window.addEventListener("error", (e) => {
 });
 
 const con = {
-	"log": (m) => {
-		document.getElementById("console").innerHTML += `<div class="log">"${m}"</div>`;
+	"log": function () {
+        console.log.apply(window, arguments);
+		document.getElementById("console").innerHTML += `<div class="log">"${Array.prototype.slice.call(arguments).join('", "')}"</div>`;
 	},
-	"warn": (m) => {
-		document.getElementById("console").innerHTML += `<div class="warn">"${m}"</div>`;
+	"warn": function () {
+        console.warn.apply(window, arguments);
+		document.getElementById("console").innerHTML += `<div class="warn">"${Array.prototype.slice.call(arguments).join('", "')}"</div>`;
 	},
-	"error": (m) => {
-		document.getElementById("console").innerHTML += `<div class="error">"${m}"</div>`;
+	"error": function () {
+        console.error.apply(window, arguments);
+		document.getElementById("console").innerHTML += `<div class="error">"${Array.prototype.slice.call(arguments).join('", "')}"</div>`;
 	},
-	"debug": (m) => {
-		document.getElementById("console").innerHTML += `<div class="debug">"${m}"</div>`;
+	"debug": function () {
+        console.debug.apply(window, arguments);
+		document.getElementById("console").innerHTML += `<div class="debug">"${Array.prototype.slice.call(arguments).join('", "')}"</div>`;
 	},
-	"info": (m) => {
-		document.getElementById("console").innerHTML += `<div class="info">"${m}"</div>`;
+	"info": function () {
+        console.info.apply(window, arguments);
+		document.getElementById("console").innerHTML += `<div class="info">"${Array.prototype.slice.call(arguments).join('", "')}"</div>`;
 	}
 };
 
