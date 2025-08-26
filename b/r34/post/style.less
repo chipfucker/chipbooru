@@ -170,11 +170,23 @@ body {
 		dl {
 			margin: 0;
 			dt {
+				font-weight: bold;
+				display: inline;
 				&::after {
 					content: ": ";
 				}
 			}
+			
 			dd {
+				font-weight: normal;
+				margin: 0;
+				display: inline;
+				&::after {
+					content: "\A";
+					white-space: pre;
+				}
+			}
+		}
 	}
 	> div.tags {
 		grid-area: tags;
