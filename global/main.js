@@ -30,7 +30,7 @@ const con = {
 };
 
 /*** TITLE ***/
-window.addEventListener("load", function() {
+window.addEventListener("load", () => {
 	const el = document.getElementById("title");
 	document.addEventListener("mousemove", function(e) {
 		el.style.top = (e.clientY + 25) +"px";
