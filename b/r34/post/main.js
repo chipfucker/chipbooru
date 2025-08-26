@@ -57,5 +57,5 @@ window.addEventListener("load", () => {
 		"comments": post.querySelector("div.comments")
 	};
 
-	con.log(JSON.stringify(element));
+	con.debug(JSON.stringify(element, null, "\t"));
 });
