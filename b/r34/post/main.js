@@ -16,12 +16,12 @@ window.addEventListener("load", () => {
 			},
 			"seek": {
 				"backward": {
-					"five": post.querySelector("div.controls > div.backward > div.5sec"),
-					"ten": post.querySelector("div.controls > div.backward > div.10sec")
+					"five": post.querySelector("div.controls > div.backward > div.five"),
+					"ten": post.querySelector("div.controls > div.backward > div.ten")
 				},
 				"forward": {
-					"five": post.querySelector("div.controls > div.forward > div.5sec"),
-					"ten": post.querySelector("div.controls > div.forward > div.10sec")
+					"five": post.querySelector("div.controls > div.forward > div.five"),
+					"ten": post.querySelector("div.controls > div.forward > div.ten")
 				}
 			},
 			"fullscreen": post.querySelector("div.controls > div.fullscreen")
