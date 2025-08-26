@@ -3,28 +3,28 @@ window.addEventListener("load", () => {
     const element = {
 		"element": document.getElementById("post"),
 		"media": {
-			"type": post.querySelector("div.content").getAttribute("data-type"),
-			"content": post.querySelector("div.content > img, div.content > video"),
-			"progress": post.querySelector("div.progress > div")
+			"type": post.querySelector("div.media").getAttribute("data-type"),
+			"content": post.querySelector("div.media > div.content > img, div.media > div.content > video"),
+			"progress": post.querySelector("div.media > div.progress > div")
 		},
 		"controls": {
-			"play-pause": post.querySelector("div.controls > div.play-pause"),
-			"mute": post.querySelector("div.controls > div.audio"),
+			"play-pause": post.querySelector("div.media > div.controls > div.play-pause"),
+			"mute": post.querySelector("div.media > div.controls > div.audio"),
 			"time": {
-				"remaining": post.querySelector("div.controls > div.time > div.left > span"),
-				"total": post.querySelector("div.controls > div.time > div.right > span")
+				"remaining": post.querySelector("div.media > div.controls > div.time > div.left > span"),
+				"total": post.querySelector("div.media > div.controls > div.time > div.right > span")
 			},
 			"seek": {
 				"backward": {
-					"five": post.querySelector("div.controls > div.backward > div.five"),
-					"ten": post.querySelector("div.controls > div.backward > div.ten")
+					"five": post.querySelector("div.media > div.controls > div.backward > div.five"),
+					"ten": post.querySelector("div.media > div.controls > div.backward > div.ten")
 				},
 				"forward": {
-					"five": post.querySelector("div.controls > div.forward > div.five"),
-					"ten": post.querySelector("div.controls > div.forward > div.ten")
+					"five": post.querySelector("div.media > div.controls > div.forward > div.five"),
+					"ten": post.querySelector("div.media > div.controls > div.forward > div.ten")
 				}
 			},
-			"fullscreen": post.querySelector("div.controls > div.fullscreen")
+			"fullscreen": post.querySelector("div.media > div.controls > div.fullscreen")
 		},
 		"info": {
 			"post": {
@@ -57,5 +57,5 @@ window.addEventListener("load", () => {
 		"comments": post.querySelector("div.comments")
 	};
 
-	con.debug(JSON.stringify(element, null, "\t"));
+	con.debug(JSON.stringify(element, null, 4));
 });
