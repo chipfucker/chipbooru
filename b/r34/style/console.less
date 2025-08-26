@@ -8,13 +8,25 @@
 	scrollbar-color: #21254e #121638;
     box-shadow: 0 3px 8px 3px #0006;
 	div {
-        padding: 8px 16px;
+        position: relative;
+        
+        padding: 16px 32px 8px;
         box-sizing: border-box;
         border-style: solid;
         border-width: 2px;
         
         background-image: linear-gradient(to bottom, var(--dark), var(--light));
         border-color: var(--light);
+        
+        &::after {
+            content: attr(class);
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+            position: absolute;
+            top: 2px;
+            left: 8px;
+        }
     }
     div.log {
         --dark: hsl(230, 50%, 15%);
@@ -40,6 +52,8 @@
         --dark: hsl(230, 50%, 15%);
         --light: hsl(230, 50%, 20%);
         color: hsl(230, 50%, 80%);
+        
+        padding: 16px 8px 8px;
         
         &::before {
             vertical-align: middle;

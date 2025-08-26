@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
-    con.log("%cbutt", "font-size: 64px;");
-    con.warn("%cbutt", "font-size: 64px;");
-    con.error("%cbutt", "font-size: 64px;");
-    con.debug("%cbutt", "font-size: 64px;");
-    con.info("%cbutt", "font-size: 64px;");
+    con.log("this is a log");
+    con.warn("this is a warning");
+    con.error("this is an error");
+    con.debug("this is a debug log");
+    con.info("this is an info message");
 });
