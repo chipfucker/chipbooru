@@ -7,6 +7,9 @@
 
 	div.clear, div.submit {
 		padding: 2px 6px;
+		span {
+			line-height: 1em;
+		}
 	}
 
 	div.input {
@@ -20,6 +23,7 @@
 		border-radius: 8px;
 
 		input {
+			padding: 0;
 			border: none;
 			outline: 0;
 			background-color: transparent;
@@ -27,6 +31,7 @@
 			font-family: inherit;
 			font-size: inherit;
 			color: inherit;
+			line-height: 1em;
 		}
 
 		div.autocomplete {
@@ -56,6 +61,11 @@
 				border-color: desaturate(darken(spin(#FFC, -5), 10%, relative), 10%, relative) transparent;
 				border-width: 0 10px 10px;
 			}
+
+			&:hover {
+				display: block;
+			}
+
 			div.result {
 				display: grid;
 				grid-template-areas: "tag count";

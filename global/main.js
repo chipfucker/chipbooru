@@ -1,4 +1,36 @@
-window.addEventListener("load", function() {
+const debug = true;
+
+window.addEventListener("error", (e) => {
+	this.document.getElementById("console").innerHTML +=
+		`<div class="error">"${e.message}" (${e.lineno}:${e.colno})\n`
+		+ `ERROR: ${JSON.stringify(e.error, null, 4)}`;
+});
+
+const con = {
+	"log": function () {
+        console.log.apply(window, arguments);
+		document.getElementById("console").innerHTML += `<div class="log">"${Array.prototype.slice.call(arguments).join('", "')}"</div>`;
+	},
+	"warn": function () {
+        console.warn.apply(window, arguments);
+		document.getElementById("console").innerHTML += `<div class="warn">"${Array.prototype.slice.call(arguments).join('", "')}"</div>`;
+	},
+	"error": function () {
+        console.error.apply(window, arguments);
+		document.getElementById("console").innerHTML += `<div class="error">"${Array.prototype.slice.call(arguments).join('", "')}"</div>`;
+	},
+	"debug": function () {
+        console.debug.apply(window, arguments);
+		document.getElementById("console").innerHTML += `<div class="debug">"${Array.prototype.slice.call(arguments).join('", "')}"</div>`;
+	},
+	"info": function () {
+        console.info.apply(window, arguments);
+		document.getElementById("console").innerHTML += `<div class="info">"${Array.prototype.slice.call(arguments).join('", "')}"</div>`;
+	}
+};
+
+/*** TITLE ***/
+window.addEventListener("load", () => {
 	const el = document.getElementById("title");
 	document.addEventListener("mousemove", function(e) {
 		el.style.top = (e.clientY + 25) +"px";
@@ -15,4 +47,9 @@ window.addEventListener("load", function() {
 			el.querySelector("span.desc").innerHTML = "";
 		}
 	});
+});
+
+/*** LUCIDE SVG ICONS ***/
+window.addEventListener("load", () => {
+	lucide.createIcons();
 });
