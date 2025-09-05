@@ -1,7 +1,7 @@
 const debug = true;
 
-window.addEventListener("error", (e) => {
-	this.document.getElementById("console").innerHTML +=
+if (debug) window.addEventListener("error", (e) => {
+	document.getElementById("console").innerHTML +=
 		`<div class="error">"${e.message}" (${e.lineno}:${e.colno})\n`
 		+ `ERROR: ${JSON.stringify(e.error, null, 4)}`;
 });
@@ -28,6 +28,12 @@ const con = {
 		document.getElementById("console").innerHTML += `<div class="info">"${Array.prototype.slice.call(arguments).join('", "')}"</div>`;
 	}
 };
+
+/*** SAFE MODE ***/
+window.addEventListener("load", function() {
+	if (new URLSearchParams(window.location.search).has("s"))
+		document.body.classList.add("safe");
+});
 
 /*** TITLE ***/
 window.addEventListener("load", () => {

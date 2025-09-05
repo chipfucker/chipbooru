@@ -6,7 +6,7 @@ const PORT = 5500;
 
 app.use("/"+base, express.static(__dirname));
 app.get("/", (req, res) => {
-	res.redirect(`/${base}`);
+	res.redirect(`/${base}?s`);
 });
 
 app.listen(PORT, () => {
